@@ -1,0 +1,71 @@
+.introducao {
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /** poderia tbm ter dividido o grid em 4fr e 8fr **/ 
+    gap: 250px;
+    align-items: center;
+}
+
+.introducao h1 {
+    font-family: "sumana";
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px; 
+    position: relative; 
+}
+
+.introducao h1::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #9c48df;
+    margin: -20px 0px 0px 340px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.introducao p {
+    font-style: "roboto";
+    font-size: 1.5rem;
+    color: #525252;
+}
+
+.introducao img {
+    border-radius: 1%;
+}
+
+@media (max-width: 1000px) {
+    .introducao h1{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .introducao {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .introducao h1 {
+        font-size: 4.5rem;
+        grid-template-columns: 1fr;
+    }
+    .introducao h1::after {
+        display: none;
+    }
+    .introducao img {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .introducao {
+        grid-template-columns: 1fr;
+    }
+    .introducao img {
+        display: none;
+    }
+}
